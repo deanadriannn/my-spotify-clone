@@ -1,8 +1,8 @@
 "use client";
 
-import LikeButton from "@/components/LikeButton";
-import MediaItem from "@/components/MediaItem";
-import useOnPlay from "@/hooks/useOnPlay";
+import LikeButton from "@/components/like-button";
+import MediaItem from "@/components/media-item";
+import useOnPlay from "@/hooks/use-on-play";
 import { Song } from "@/types";
 
 interface SearchContentProps {

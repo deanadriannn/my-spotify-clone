@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 import useSound from "use-sound";
 
 import { Song } from "@/types";
-import MediaItem from "./MediaItem";
-import LikeButton from "./LikeButton";
-import Slider from "./Slider";
-import usePlayer from "@/hooks/usePlayer";
+import MediaItem from "./media-item";
+import LikeButton from "./like-button";
+import Slider from "./Slider2";
+import usePlayer from "@/hooks/use-player";
 
 interface PlayerContentProps {
   song: Song;

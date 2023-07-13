@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-import useLoadImage from "@/hooks/useLoadImage";
+import useLoadImage from "@/hooks/use-load-image";
 import { Song } from "@/types";
-import PlayButton from "./PlayButton";
+import PlayButton from "./play-button";
 
 interface SongItemProps {
   data: Song;

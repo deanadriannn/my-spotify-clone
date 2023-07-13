@@ -7,11 +7,11 @@ import { toast } from "react-hot-toast";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 
-import useUploadModal from "@/hooks/useUploadModal";
-import Modal from "./Modal";
-import Input from "./Input";
-import Button from "./button";
-import { useUser } from "@/hooks/useUser";
+import useUploadModal from "@/hooks/use-upload-modal";
+import Modal from "./Modal2";
+import Input from "./Input2";
+import Button from "./button2";
+import { useUser } from "@/hooks/use-user";
 
 const UploadModal = () => {
   const [isLoading, setIsLoading] = useState(false);
