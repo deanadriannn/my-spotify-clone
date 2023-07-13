@@ -1,19 +1,20 @@
-import './globals.css'
-import { Figtree } from 'next/font/google'
+import { Figtree } from "next/font/google";
 
-import Sidebar from '@/components/Sidebar'
-import SupabaseProvider from '@/providers/SupabaseProvider'
-import UserProvider from '@/providers/UserProvider'
-import ModalProvider from '@/providers/ModalProvider'
-import ToasterProvider from '@/providers/ToasterProvider'
-import getSongsByUserId from '@/actions/getSongsByUserId'
-import Player from '@/components/Player'
+import Sidebar from "@/components/Sidebar";
+import SupabaseProvider from "@/providers/SupabaseProvider";
+import UserProvider from "@/providers/UserProvider";
+import ModalProvider from "@/providers/ModalProvider";
+import ToasterProvider from "@/providers/ToasterProvider";
+import getSongsByUserId from "@/actions/getSongsByUserId";
+import Player from "@/components/Player"
 
-const font = Figtree({ subsets: ['latin'] })
+import "./globals.css";
+
+const font = Figtree({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Spotify Clone',
-  description: 'Spotify Clone made by Antonio',
+  title: "Spotify Clone",
+  description: "Spotify Clone made by Antonio",
 }
 
 export const revalidate = 0;
@@ -39,5 +40,5 @@ export default async function RootLayout({
         </SupabaseProvider>
       </body>
     </html>
-  )
-}
+  );
+};
