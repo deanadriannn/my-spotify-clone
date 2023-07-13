@@ -10,7 +10,7 @@ import { FaUserAlt } from "react-icons/fa"
 import { toast } from "react-hot-toast"
 
 import useAuthModal from "@/hooks/useAuthModal"
-import Button from "./Button"
+import Button from "./button"
 import { useUser } from "@/hooks/useUser"
 
 interface HeaderProps {

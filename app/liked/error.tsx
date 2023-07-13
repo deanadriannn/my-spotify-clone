@@ -1,6 +1,6 @@
 "use client";
 
-import Box from "@/components/Box";
+import Box from "@/components/box";
 
 const Error = () => {
   return (
@@ -9,7 +9,7 @@ const Error = () => {
         Something went wrong.
       </div>
     </Box>
-  )
-}
+  );
+};
 
 export default Error;

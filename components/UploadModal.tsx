@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 import useUploadModal from "@/hooks/useUploadModal";
 import Modal from "./Modal";
 import Input from "./Input";
-import Button from "./Button";
+import Button from "./button";
 import { useUser } from "@/hooks/useUser";
 
 const UploadModal = () => {
