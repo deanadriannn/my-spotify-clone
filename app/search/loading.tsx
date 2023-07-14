@@ -2,7 +2,7 @@
 
 import { BounceLoader } from "react-spinners";
 
-import Box from "@/components/box2";
+import Box from "@/components/box";
 
 const Loading = () => {
   return (

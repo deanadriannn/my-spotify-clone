@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import useDebounce from "@/hooks/use-debounce";
-import Input from "./Input2";
+import Input from "./input";
 
 const SearchInput = () => {
   const router = useRouter();
@@ -18,7 +18,7 @@ const SearchInput = () => {
     }
 
     const url = qs.stringifyUrl({
-      url: '/search',
+      url: "/search",
       query: query
     });
 
@@ -31,7 +31,7 @@ const SearchInput = () => {
       value={value}
       onChange={(e) => setValue(e.target.value)}
     />
-  )
-}
+  );
+};
 
-export default SearchInput
+export default SearchInput;

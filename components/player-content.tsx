@@ -9,13 +9,13 @@ import useSound from "use-sound";
 import { Song } from "@/types";
 import MediaItem from "./media-item";
 import LikeButton from "./like-button";
-import Slider from "./Slider2";
+import Slider from "./slider";
 import usePlayer from "@/hooks/use-player";
 
 interface PlayerContentProps {
   song: Song;
   songUrl: string;
-}
+};
 
 const PlayerContent: React.FC<PlayerContentProps> = ({
   song,
@@ -93,7 +93,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
     } else {
       setVolume(0);
     }
-  }
+  };
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
@@ -107,87 +107,38 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
       <div className="flex md:hidden col-auto w-full justify-end items-center">
         <div
           onClick={handlePlay}
-          className="
-            h-10
-            w-10
-            flex
-            items-center
-            justify-center
-            rounded-full
-            bg-white
-            p-1
-            cursor-pointer
-          "
+          className="h-10 w-10 flex items-center justify-center rounded-full bg-white p-1 cursor-pointer"
         >
           <Icon size={30} className="text-black" />
         </div>
       </div>
 
-      <div
-        className="
-          hidden 
-          h-full 
-          md:flex
-          justify-center
-          items-center
-          w-full
-          max-w-[722px]
-          gap-x-6
-        "
-      >
+      <div className="hidden h-full md:flex justify-center items-center w-full max-w-[722px] gap-x-6">
         <AiFillStepBackward
-          onClick={onPlayPrevious}
-          size={30}
-          className="
-            text-neutral-400
-            cursor-pointer
-            hover:text-white
-            transition
-          "
+          onClick={onPlayPrevious} size={30}
+          className="text-neutral-400 cursor-pointer hover:text-white transition"
         />
         <div
           onClick={handlePlay}
-          className="
-            flex
-            items-center
-            justify-center
-            h-10
-            w-10
-            rounded-full
-            bg-white
-            p-1
-            cursor-pointer
-          "
+          className="flex items-center justify-center h-10 w-10 rounded-full bg-white p-1 cursor-pointer"
         >
           <Icon size={30} className="text-black" />
         </div>
         <AiFillStepForward
-          onClick={onPlayNext}
-          size={30}
-          className="
-            text-neutral-400
-            cursor-pointer
-            hover:text-white
-            transition
-          "
+          onClick={onPlayNext} size={30}
+          className="text-neutral-400 cursor-pointer hover:text-white transition"
         />
       </div>
 
       <div className="hidden md:flex w-full justify-end pr-2">
         <div className="flex items-center gap-x-2 w-[120px]">
-          <VolumeIcon
-            onClick={toggleMute}
-            className="cursor-pointer"
-            size={34}
+          <VolumeIcon onClick={toggleMute} className="cursor-pointer" size={34}
           />
-          <Slider
-            value={volume}
-            onChange={(value) => setVolume(value)}
-          />
+          <Slider value={volume} onChange={(value) => setVolume(value)} />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PlayerContent
+export default PlayerContent;

@@ -11,7 +11,7 @@ import { useUser } from "@/hooks/use-user";
 
 interface LikeButtonProps {
   songId: string;
-}
+};
 
 const LikeButton: React.FC<LikeButtonProps> = ({
   songId
@@ -57,7 +57,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({
         .from('liked_songs')
         .delete()
         .eq('user_id', user.id)
-        .eq('song_id', songId)
+        .eq('song_id', songId);
 
       if (error) {
         toast.error(error.message);
@@ -84,16 +84,10 @@ const LikeButton: React.FC<LikeButtonProps> = ({
   }
 
   return (
-    <button
-      onClick={handleLike}
-      className="
-        hover:opacity-75
-        transition
-      "
-    >
+    <button onClick={handleLike} className="hover:opacity-75 transition">
       <Icon color={isLiked ? '#22c55e' : 'white'} size={25} />
     </button>
-  )
-}
+  );
+};
 
-export default LikeButton
+export default LikeButton;

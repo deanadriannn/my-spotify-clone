@@ -8,9 +8,9 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 
 import useUploadModal from "@/hooks/use-upload-modal";
-import Modal from "./Modal2";
-import Input from "./Input2";
-import Button from "./button2";
+import Modal from "./modal";
+import Input from "./input";
+import Button from "./button";
 import { useUser } from "@/hooks/use-user";
 
 const UploadModal = () => {
@@ -115,7 +115,7 @@ const UploadModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }
+  };
 
   return (
     <Modal
@@ -169,7 +169,7 @@ const UploadModal = () => {
         </Button>
       </form>
     </Modal>
-  )
-}
+  );
+};
 
-export default UploadModal
+export default UploadModal;
